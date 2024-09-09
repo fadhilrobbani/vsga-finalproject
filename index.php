@@ -98,14 +98,14 @@ $paket = mysqli_query($koneksi, "SELECT * FROM paket");
         </div>
       </div>
       <div class="col-md-4">
-        <form class="d-flex mb-3" role="search">
+        <!-- <form class="d-flex mb-3" role="search">
           <input
             class="form-control me-2"
             type="search"
             placeholder="Cari"
             aria-label="Cari" />
           <button class="btn btn-outline-success" type="submit">Cari</button>
-        </form>
+        </form> -->
         <div class="ratio ratio-16x9">
           <iframe
             src="https://www.youtube.com/embed/aKtb7Y3qOck"

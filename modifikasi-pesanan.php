@@ -66,7 +66,7 @@ $pemesanan = mysqli_query($koneksi, "SELECT * FROM pemesanan");
          </div>
       </nav>
    </header>
-   <div class="container my-5">
+   <div class="container-fluid my-5 w-100">
       <h2 class="text-center">Daftar Pesanan</h2>
       <table class="table table-bordered">
          <thead>
@@ -96,8 +96,8 @@ $pemesanan = mysqli_query($koneksi, "SELECT * FROM pemesanan");
                   <td><?php echo  "Rp" . number_format($row['harga_paket'], 2, ",", "."); ?></td>
                   <td><?php echo "Rp" . number_format($row['total_tagihan'], 2, ",", "."); ?></td>
                   <td class="container-fluid d-flex gap-2">
-                     <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                     <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                     <a href="form-edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
+                     <a href="delete.php?id=<?php echo $row['id']; ?>" onclick="return window.confirm('Apakah anda yakin ingin menghapus data ini?')" class="btn btn-danger btn-sm">Delete</a>
                   </td>
                </tr>
             <?php endforeach; ?>
